@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom'
 import style from '../style/editArea.less'
 
 class EditArea extends Component {
@@ -12,8 +13,7 @@ class EditArea extends Component {
             return;
         }
         textarea.setSelectionRange(curPos,curPos);
-        textarea.focus();
-
+        textarea.focus(); 
    } 
 
     render() {
@@ -25,7 +25,10 @@ class EditArea extends Component {
                 onChange={this.props.EditAreaChange}
                 onSelect={this.props.EditAreaSelect}
                 value={Text}
+                ref="EditArea"
+                onKeyDown={this.props.handleTabPress}
                 >
+                ""
             </textarea>
         );
     }

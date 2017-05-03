@@ -1,8 +1,7 @@
 :global{
     body {
         margin: 0 auto;
-        font-family: Georgia, Palatino, serif;
-        line-height: 1;
+        line-height: 1.5;
         h1,
         h2,
         h3,
@@ -30,23 +29,27 @@
         a:hover {
             text-decoration: none;
         }
+      
         ul,
         ol {
             padding: 0;
             margin: 0;
         }
-        li{
-            list-style:none;
-        }
+        // li{
+        //     list-style:none;
+        // }
         pre {
             padding: 0px 24px;
-            max-width: 800px;
+            max-width: 620px;
             white-space: pre-wrap;
+            background-color:#616161;
         }
         code {
             font-family: Consolas, Monaco, Andale Mono, monospace;
-            line-height: 1.5;
-            font-size: 13px;
+            line-height: 16px;
+            font-size: 16px;
+            color:white;
+            background-color:#616161;
         }
         aside {
             display: block;
@@ -54,22 +57,22 @@
             width: 390px;
         }
         blockquote {
-            border-left: .5em solid #eee;
-            padding: 0 2em;
+            border-left: 5px solid #c1d6f5;
+            padding:1px 2em;
             margin-left: 0;
-            max-width: 476px;
+            margin:0;
+            max-width: 590px;
+            background-color:#dedede;
         }
         blockquote cite {
             font-size: 14px;
-            line-height: 20px;
-            color: #bfbfbf;
+            line-height: 14px;
         }
         blockquote cite:before {
             content: '\2014 \00A0';
         }
         blockquote p {
-            color: #666;
-            max-width: 460px;
+            max-width: 590px;
         }
         hr {
             width: 540px;
@@ -78,7 +81,5 @@
             color: #999;
         }
     }
-    #app{
-        
-    }
+
 }

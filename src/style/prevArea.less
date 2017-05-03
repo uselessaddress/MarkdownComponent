@@ -1,14 +1,15 @@
 :local{
     .prevArea{
         position: absolute;
-        padding-left:25px;
-        padding-top:15px;
+        white-space: pre-wrap;
         right:0;
         top:40px;
         width:50%;
-        height:650px;
+        height:calc(~"100% - 56px");
+        // height:(~"calc(100%-30px)");
+        padding-top:10px;
         overflow: auto;
-        background-color:#f6f6f6;
+        background-color:#ffffff;
         font-size:18px;
         transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
         // &-after{
@@ -23,9 +24,27 @@
         //     font-size:18px;
         // }
     }
+    .prevArea-after{
+        position: absolute;
+        right:0;
+        top:-90px;
+        width:100%;
+        height:calc(~"100% + 90px");
+        overflow: auto;
+        background-color:#ffffff;
+        font-size:18px;
+        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .markDownArea{
+        position:absolute;
+        left:40px;
+        top:15px;
+    }
     .prevButton{
          position: absolute;
          left:10px;
+         top:35px;
          width:auto;
          height:auto;
          i{

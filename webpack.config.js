@@ -91,10 +91,10 @@ module.exports = {
             filename: 'index.html',
             template: 'html-withimg-loader!' + './index.html'
         }),
-        new TransferWebpackPlugin([]),
-        new webpack.DllReferencePlugin({
-            context: __dirname + '/pub/',
-            manifest: require("./pub/bundle.manifest.json"),
-        }),
+        // new TransferWebpackPlugin([]),
+        // new webpack.DllReferencePlugin({
+        //     context: __dirname + '/pub/',
+        //     manifest: require("./pub/bundle.manifest.json"),
+        // }),
     ]
 }

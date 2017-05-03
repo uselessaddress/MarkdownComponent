@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom'
 import style from '../style/toolBar.less'
 
 class ToolBtn extends Component {
@@ -10,9 +11,9 @@ class ToolBtn extends Component {
         const {ico, label} = this.props;
 
         return (
-            <li >
+            <li className={style["item"]}
+                onClick={this.props.handleClick}>
                 <a  aria-label={label}
-                    onClick={this.props.handleClick}
                     >
                     <i className={`fa fa-${ico}`} aria-hidden="true" ></i>
                 </a>
@@ -25,6 +26,11 @@ class ToolBtn extends Component {
 class ToolBar extends Component {
     constructor(props){
         super(props)
+    }
+    handleDownLoad=()=>{
+        const rawText = this.props.rawText;
+        var blob = new Blob([`${rawText}`]);
+        ReactDOM.findDOMNode(this.refs.down).href = window.URL.createObjectURL(blob);
     }
     render() {
         const {btns} =  this.props;
@@ -43,7 +49,16 @@ class ToolBar extends Component {
                         }
                     )}
                 </ul>
+            <div className={style["clear-btn"]}
+                     onClick={this.props.ClearArea}>全部清除</div>
+             <a className={style["download-btn"]}
+                    ref = "down"
+                    download={`${this.props.title}.md`}
+                    onClick={this.handleDownLoad}    
+                     >下载文件</a>
             </div>
+           
+            
 
         );
     }
